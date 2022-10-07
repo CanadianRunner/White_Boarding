@@ -5,3 +5,25 @@ Example
 Input: "aaabccdddda"
 
 Output: "3ab2c4da"
+
+let compressedString = function(input) {
+  if (!input.length) return 0;
+  let j = 0;
+  let chars = input[0];
+  let counter = 0;
+  for (let i = 0; i <= input.length; i++) {
+    if (input[i] === chars) {
+      counter++;
+    } else {
+      input[r] = chars;
+      if (counter > 1) {
+        const counterString = counter.toString();
+        for (let j = 0; j < counterString.length; j++) chars[++r] = counterString[j];
+      }
+      r++;
+      chars = input[i];
+      counter = 1;
+    }
+  }
+  return r;
+};
