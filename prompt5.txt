@@ -18,6 +18,8 @@ Output: [2, 7, 9, 12]
 
 //Questions
 Are you okay if I solve this in JavaScript?
+Just #'s?
+
 
 
 function sortArray(array) {
@@ -32,4 +34,41 @@ function sortArray(array) {
     }
   }
   return array;
+}
+
+
+//Bubble SORT
+function sortNumbers(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            let temp = arr[i];
+            if (arr[i] < arr[j]) {
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+console.log(sortNumbers([1, 10, 9, 8, 3, 6]))
+
+//insertion sort
+Link to documentation: https://stackabuse.com/insertion-sort-in-javascript/
+
+
+function insertionSort(inputArr) {
+        for (let i = 1; i < inputArr.length; i++) {
+            // Choosing the first element in our unsorted subarray
+            let current = inputArr[i];
+            
+            // The last element of our sorted subarray  // subarray comparing the two #'s
+            let j = i-1; 
+            while ((j > -1) && (current < inputArr[j])) {
+                inputArr[j+1] = inputArr[j];
+                j--;
+            }
+            inputArr[j+1] = current;
+        }
+    return inputArr;
 }

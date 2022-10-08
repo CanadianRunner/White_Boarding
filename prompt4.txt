@@ -14,12 +14,22 @@ Questions
 Are you okay if I solve this in JavaScript?
 Just to confirm I can't convert a string into an array or use array methods to solve this problem?
 
+function uniqueness(string) {
+  for(let i = 0; i < string.length; i++) {  //loop to check if character is in string
+    for(let j = i + 1; j < string.length; j++) {
+    	if (string[i] === string[j]) {
+      		return false
+      }
+    }
+  }
+  return true;
+}
 
 function uniqueness(string) {
         let notUnique = "";     //empty string
 
         for(let i = 0; i < string.length; i++) {  //loop to check if character is in string
-          if(notUnique.includes(string[i]) === false) { // if charcter is in string = false
+          if(!notUnique.includes(string[i])) { // if charcter is in string = false
             notUnique += string[i];                     // push to notUnique 
           }
         }
@@ -30,3 +40,18 @@ function uniqueness(string) {
           return false;                // else return false
         }
       }
+
+
+function uniqueness(string) {
+  let notUnique = "";     //empty string
+
+  for(let i = 0; i < string.length; i++) {  //loop to check if character is in string
+    if(!notUnique.includes(string[i])) { // if charcter is in string = false
+      notUnique += string[i];                     // push to notUnique 
+    }
+  }
+
+  return notUnique === string;
+}
+console.log(uniqueness("sad"));
+console.log(uniqueness("saad"));

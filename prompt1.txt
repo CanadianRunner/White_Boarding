@@ -15,36 +15,48 @@ Output: "Jasmine%20Ann%20Jones"
 Are you okay if I solve this problem with JavaScript?
 Can I assume the input will only be strings?
 Will I only be replacing the spaces with %20?
+will there be double spaces? if so should I put %20 twice or once for both?
+what if there are spaces on the beginning and end? => .trim()
 
 
 //Code
 
 without .replace
 
-function replaceSpaces(url) {
+function replaceSpaces(string) {          // Time complexity o(n);
   let stringOutput = "";                  // instantiate variable to be equal to an empty string.
 
-  for (let i = 0; i < url.length; i++) {  //look for spaces w/ for loop.
+  for (let i = 0; i < string.length; i++) {  //look for spaces w/ for loop.
     if (url[i] === " ") {                 // replaces spaces w/ %20
       stringOutput += "%20";
     } else {
-      stringOuput += url[i];              //else character
+      stringOuput += string[i];              //else character
     }
   }
     return stringOutput;                  // return updated string to URLs
 }
 
-example with replace
+example with replace All
+function replace(string) {
+    string.replaceAll(" ", "%20");
+    return string;
+}
 
-function replaceSpaces(url)
+function replaceSpaces(string)
 {
   let replacedChar = "%20"
   for(let i =0; i < input.length; i++)
   {
     if(url[i] == " ")
-      url = url.replace(url[i], replacedChar);
+      url = url.replace(string[i], replacedChar);
   }
-  return url;
+  return string;
 }
 
   replaceSpaces("Jasmine Ann Jones");
+
+
+function urlCreator (string) {
+    const stringArr = string.split(" ");
+
+}

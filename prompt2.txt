@@ -13,7 +13,6 @@ I can assume I will only be removing duplicates?
 I see in your example I can expect to compare different types strings and integers.  Are those the only values I will need to check for?
 
 
-
 //Code
 without .filter
 
@@ -29,12 +28,16 @@ function removeDuplicates(inputs) {
     return replacedArray;
 }
 
+var inputtedArray = [7, 9, "hi", 12, "hi", 7, 53];
+const uniq = [...new Set(inputtedArray)];  //spread syntax allows you to access the elements within the array and iteriate on them.  Spread syntax essentially for loops through the array.
+console.log(uniq);
+
 With filter
 
 let inputtedArray = [7, 9, "hi", 12, "hi", 7, 53];
 
-function removeDuplicates(arrayValues) {
-    return data.filter((value, index) => arrayValues.indexOf(value) === index);
+function removeDuplicates(arrayValues) {                               //functional (filter does shallow copy)
+    return arrayValues.filter((value, index) => arrayValues.indexOf(value) === index);
 }
   console.log(removeDuplicates(inputtedArray));
 
