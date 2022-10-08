@@ -16,8 +16,20 @@ Will I only be replacing the spaces with %20?
 
 //Code
 
-
 without .replace
+
+function replaceSpaces(url) {
+  let stringOutput = "";                  // instantiate variable to be equal to an empty string.
+
+  for (let i = 0; i < url.length; i++) {  //look for spaces w/ for loop.
+    if (url[i] === " ") {                 // replaces spaces w/ %20
+      stringOutput += "%20";
+    } else {
+      stringOuput += url[i];              //else character
+    }
+  }
+    return stringOutput;                  // return updated string to URLs
+}
 
 example with replace
 
