@@ -6,24 +6,31 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
-let compressedString = function(input) {
-  if (!input.length) return 0;
-  let j = 0;
-  let chars = input[0];
-  let counter = 0;
-  for (let i = 0; i <= input.length; i++) {
-    if (input[i] === chars) {
-      counter++;
+function compress(string) {
+  let outputString = "";
+  let currentLetter = string[0];
+  let count = 1;
+  for (let i = 1; i < string.length; i++) {
+    if (string[i] === currentLetter) {
+        count++;
+    } else if (count !== 1) {
+        outputString += count + currentLetter;
+      currentLetter = string[i];
+      count = 1;
     } else {
-      input[r] = chars;
-      if (counter > 1) {
-        const counterString = counter.toString();
-        for (let j = 0; j < counterString.length; j++) chars[++r] = counterString[j];
-      }
-      r++;
-      chars = input[i];
-      counter = 1;
+        outputString += currentLetter;
+      currentLetter = string[i];
     }
   }
-  return r;
-};
+  if (count === 1) {
+      outputString += currentLetter;
+  } else {
+      outputString += count + currentLetter;
+  }
+  console.log(outputString);
+}
+
+compress("aaabccdddda");
+
+
+
