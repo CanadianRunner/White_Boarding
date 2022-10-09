@@ -29,6 +29,8 @@ function removeDuplicates(inputs) {         //create the function remove duplica
     return replacedArray;                       // we then return the replacedArray
 }
 
+//test this simplified function
+
 var inputtedArray = [7, 9, "hi", 12, "hi", 7, 53];
 const uniq = [...new Set(inputtedArray)];  //spread syntax allows you to access the elements within the array and iteriate on them.  Spread syntax essentially for loops through the array.
 console.log(uniq);

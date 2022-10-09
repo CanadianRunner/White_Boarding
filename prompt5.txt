@@ -35,9 +35,11 @@ function sortArray(array) {
     array[j] = temporary;          // 2nd num = 1st num
       }
     }
+    return array;
   }
-  return array;
-}
+  
+
+console.log(sortArray([1, 10, 9, 8, 3, 6]));
 
 
 //Bubble SORT

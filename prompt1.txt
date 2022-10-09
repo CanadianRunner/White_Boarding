@@ -32,11 +32,13 @@ function replaceSpaces(string) {          // Time complexity o(n);
     if (string[i] === " ") {                 // replaces spaces w/ %20
       stringOutput += "%20";
     } else {
-      stringOuput += string[i];              //else character
+      stringOutput += string[i];              //else character
     }
   }
     return stringOutput;                  // return updated string to URL
 }
+
+console.log(replaceSpaces("Jasmine Ann Jones"));
 
 example with replace All
 function replace(string) {

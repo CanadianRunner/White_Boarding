@@ -34,6 +34,7 @@ function uniqueness(string) {
         }
       }
 
+//Test this function (it's simplified)
 
 function uniqueness(string) {
   let notUnique = "";     //empty string
