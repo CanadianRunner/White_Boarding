@@ -7,6 +7,7 @@ JavaScript?
 You want the number listed first?
 Do I count all the characters seperatley.  As ie  aaa vs a at the end?
 Sort alphabetically?
+Can I use built in methods?
 
 Example
 Input: "aaabccdddda"
@@ -40,6 +41,27 @@ function compress(string) {
 
 compress("aaabccdddda");
 
+
+var compress = function(chars) {    
+    let count = 1                 //set intial count to 1
+    let result = ""               // set result to an empty string
+      for (let i = 0; i < chars.length; i++) {        // create a for loop and set index to 0.  if index is less than chars.length increment by one?
+        let currentChar = chars[i];
+        let nextChar = chars[i + 1];        
+          if (currentChar === nextChar) {
+            count ++
+        } else {                                   //This is a conditional terenary opertator and acts as out if else statement.
+        		const valueToBeAdded = count === 1 ? chars[i] : count + chars[i]     
+            result += valueToBeAdded
+            count = 1
+        }
+    }
+    console.log(result)
+
+};
+   compress("aaabccdddda");
+
+
 function compress(message){
   let compressedString = ""
   let messageArray = message.split("")
@@ -58,23 +80,3 @@ function compress(message){
   }
   return compressedString
 }
-
-
-var compress = function(chars) {    
-    let count = 1
-    let result = ""    
-      for (let i = 0; i < chars.length; i++) {        
-        let cur = chars[i];
-        let next = chars[i + 1];        
-          if (cur === next) {
-            count ++
-        } else {
-        		const valueToBeAdded = count === 1 ? chars[i] : count + chars[i]      //This is a conditional terenary opertator and acts as out if else statement.
-            result += valueToBeAdded
-            count = 1
-        }
-    }
-    console.log(result)
-
-};
-   compress("aaabccdddda");

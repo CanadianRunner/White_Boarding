@@ -13,6 +13,8 @@ Output: true
 Questions
 Are you okay if I solve this in JavaScript?
 Just to confirm I can't convert a string into an array or use array methods to solve this problem?
+Can I use built in methods?
+I will only be expected to return a boolean?
 
 
 

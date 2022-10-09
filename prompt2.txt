@@ -9,24 +9,24 @@ Output: [7, 9, "hi", 12, 53]
 //Questions
 
 Are you okay if I solve this problem with JavaScript?
+Can I use built in methods?
 I can assume I will only be removing duplicates?
-I see in your example I can expect to compare different types strings and integers.  Are those the only values I will need to check for? (objects, dictionaries, etc)
-
+I see in your example I can expect to compare different types strings and integers.  Are those the only values I will need to check for?
 
 
 //Code
 without .filter
 
-let inputtedArray = [7, 9, "hi", 12, "hi", 7, 53];
+let inputtedArray = [7, 9, "hi", 12, "hi", 7, 53];   //instantiate the example input
 
-function removeDuplicates(inputs) {
-  let replacedArray = [];
-    inputs.forEach(char => {
-      if (!replacedArray.includes(char)) {
-        replacedArray.push(char)
+function removeDuplicates(inputs) {         //create the function remove duplicates with the arguement of inputs
+  let replacedArray = [];                   //instantiate an empty array
+    inputs.forEach(char => {                // foreach through each input utilizing es6 arrow notation
+      if (!replacedArray.includes(char)) {           // if statement using the .includes method checking the new array for each 
+        replacedArray.push(char)                         character and pushing those characters to the new array.
       }
     });
-    return replacedArray;
+    return replacedArray;                       // we then return the replacedArray
 }
 
 var inputtedArray = [7, 9, "hi", 12, "hi", 7, 53];

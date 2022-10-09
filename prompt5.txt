@@ -18,7 +18,10 @@ Output: [2, 7, 9, 12]
 
 //Questions
 Are you okay if I solve this in JavaScript?
-Just #'s?
+I can expect the example inputs to only include numbers?
+Can I use built in methods?
+I can't use sort();?
+
 
 
 

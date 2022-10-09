@@ -18,6 +18,7 @@ Will I only be replacing the spaces with %20?
 will there be double spaces? if so should I put %20 twice or once for both?
 What if the url already contains %20?
 what if there are spaces on the beginning and end? => .trim()
+Can I use built in methods?
 
 
 //Code
