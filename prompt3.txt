@@ -14,23 +14,23 @@ Input: "aaabccdddda"
 Output: "3ab2c4da"
 
 function compress(string) {
-  let outputString = "";
-  let currentLetter = string[0];
-  let count = 1;
+  let outputString = "";          //instantiate an empty string
+  let currentLetter = string[0];     //set currentLetter to string at the first index
+  let count = 1;                      // set count = 1
   
-  for (let i = 1; i < string.length; i++) {
-    if (string[i] === currentLetter) {
-        count++;
-    } else if (count > 1) {
-        outputString += count + currentLetter;
-      currentLetter = string[i];
-      count = 1;
+  for (let i = 1; i < string.length; i++) {     //Create a for loop that set index to 1.  If index is less than string length then we incremenete by 1
+    if (string[i] === currentLetter) {          // If string at the current index is equal to currentLetter we increase count by 1.
+        count++;              
+    } else if (count > 1) {                           // If the count is greater than 1 then we set outputString += to count + currentLetter.
+        outputString += count + currentLetter;        //Then we set currentLetter = string at that index.
+      currentLetter = string[i];                      
+      count = 1;                                      //And set the count to 1.
     } else {
-        outputString += currentLetter;
-      currentLetter = string[i];
+        outputString += currentLetter;                // In our else catch we set outString += currentLetter
+      currentLetter = string[i];                      // Then we set currentletter = string[i]
     }
   }
-  if (count === 1) {
+  if (count === 1) {                                          
       outputString += currentLetter;
   } else {
       outputString += count + currentLetter;
@@ -50,7 +50,7 @@ function compress(message){
       count++
       i++
     }
-    if (count === 1){
+    if (count === 1){                                     
       compressedString += currentLetter
     } else {
       compressedString += currentLetter + count
@@ -69,10 +69,12 @@ var compress = function(chars) {
           if (cur === next) {
             count ++
         } else {
-        		const valueToBeAdded = count === 1 ? chars[i] : count + chars[i]
+        		const valueToBeAdded = count === 1 ? chars[i] : count + chars[i]      //This is a conditional terenary opertator and acts as out if else statement.
             result += valueToBeAdded
             count = 1
         }
     }
     console.log(result)
+
 };
+   compress("aaabccdddda");

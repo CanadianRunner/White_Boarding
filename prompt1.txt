@@ -16,6 +16,7 @@ Are you okay if I solve this problem with JavaScript?
 Can I assume the input will only be strings?
 Will I only be replacing the spaces with %20?
 will there be double spaces? if so should I put %20 twice or once for both?
+What if the url already contains %20?
 what if there are spaces on the beginning and end? => .trim()
 
 
@@ -27,13 +28,13 @@ function replaceSpaces(string) {          // Time complexity o(n);
   let stringOutput = "";                  // instantiate variable to be equal to an empty string.
 
   for (let i = 0; i < string.length; i++) {  //look for spaces w/ for loop.
-    if (url[i] === " ") {                 // replaces spaces w/ %20
+    if (string[i] === " ") {                 // replaces spaces w/ %20
       stringOutput += "%20";
     } else {
       stringOuput += string[i];              //else character
     }
   }
-    return stringOutput;                  // return updated string to URLs
+    return stringOutput;                  // return updated string to URL
 }
 
 example with replace All

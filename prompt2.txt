@@ -10,7 +10,8 @@ Output: [7, 9, "hi", 12, 53]
 
 Are you okay if I solve this problem with JavaScript?
 I can assume I will only be removing duplicates?
-I see in your example I can expect to compare different types strings and integers.  Are those the only values I will need to check for?
+I see in your example I can expect to compare different types strings and integers.  Are those the only values I will need to check for? (objects, dictionaries, etc)
+
 
 
 //Code
